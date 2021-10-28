@@ -9,5 +9,5 @@ command /reallifereg:
 	trigger:
 		if {%player's uuid%.register.price} is "false":
 			set {%player's uuid%.register.price} to "true"
-    else:
-      send "&4[&cRealLife&4] &rもう既に登録されています" to player
+   		else:
+      			send "&4[&cRealLife&4] &rもう既に登録されています" to player
