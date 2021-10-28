@@ -1,0 +1,13 @@
+on first join:
+	add 10000 {%player's uuid%.money.price}
+	send "&4[&cRealLife&4] &c%player%&rさんようこそ。" to player
+	send "&4[&cRealLife&4] &rここは現実世界のような生活がマインクラフト上でできるサーバー、&aRealLife Server&rです。" to player
+	send "&4[&cRealLife&4] &rまずは&a住民票&rを登録しましょう。" to player
+	send "&4[&cRealLife&4] &a/reallifereg &rで登録しましょう！" to player
+	set {%player's uuid%.register.price} to "false"
+command /reallifereg:
+	trigger:
+		if {%player's uuid%.register.price} is "false":
+			set {%player's uuid%.register.price} to "true"
+    else:
+      send "&4[&cRealLife&4] &rもう既に登録されています" to player
