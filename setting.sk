@@ -1,1 +1,5 @@
-https://pastebin.com/raw/1qbXBX09
+command /setreg <text>:
+	permission: op
+	trigger:
+		set {%player's uuid%.register.price} to "%arg-1%"
+		send "でけた" to player
